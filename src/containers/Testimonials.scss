@@ -1,0 +1,91 @@
+@import '../scss/variables';
+.testimonials {
+    background-color: $color-gray-light-2;
+    padding: 55px 0 75px;
+}
+.testimonials-slider {
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
+    margin-top: 40px;
+}
+
+.testimonials-slider__item-wrapper {
+    padding: 0 15px;
+    position: relative;
+}
+.testimonials-slider__item {
+    width: 100%;
+    position: relative;
+}
+
+.testimonials-slider__text {
+    background-color: $color-white;
+    border-radius: 15px;
+    padding: 25px 25px 30px;
+    position: relative;
+    margin-bottom: 15px;
+    &::after {
+        content: '';
+        display: block;
+        border-top: 15px;
+        border-bottom: 15px;
+        border-left: 12px;
+        border-right: 12px;
+        border-style: solid;
+        border-color: transparent;
+        border-top-color: $color-white;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
+
+.testimonials-slider__item-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #18191F;
+}
+.testimonials-slider__item-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #18191F;
+    text-align: center;
+    &:not(:first-child) {
+        margin-top: 6px;
+    }
+}
+
+.testimonials-slider__author {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+}
+.testimonials-slider__author-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #18191F;
+    margin-top: 8px;
+}
+.testimonials-slider__author-position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: #474A57;
+}

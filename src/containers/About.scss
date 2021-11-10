@@ -1,0 +1,42 @@
+@import '../scss/variables';
+.about{
+    background-color: $color-white;
+}
+.about__inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.about__gallery {
+    width: 100%;
+    max-width: 540px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 73px 0 104px;
+}
+.about__gallery-item {
+    &:not(:first-child):not(:nth-child(2)) {
+        margin-top: 20px;
+    }
+    &:nth-child(2) {
+        align-self: end;
+    }
+}
+
+.about__text {
+    width: calc(100% - 540px);
+    position: relative;
+    padding: 73px 0 73px 59px;
+}
+
+.about__text-desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: $color-gray;
+    &:not(:first-child){
+        margin-top: 20px;
+    }
+}

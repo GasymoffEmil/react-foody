@@ -1,0 +1,51 @@
+@import '../scss/variables';
+.footer {
+    background-color: $color-black;
+    color: $color-white;
+}
+.footer__inner {
+    padding: 55px 0 55px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    width: 60px;
+    position: relative;
+    display: block;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: flex-start;
+    &:not(:first-child){
+        margin-top: 26px;
+    }
+    a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        font-feature-settings: 'liga' off;
+        color: $color-white;
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+        &:hover{
+            color: $color-orange;
+        }
+    }
+}
+
+.copyrights{
+    color: $color-gray-light;
+    display: inline-block;
+    &:not(:first-child){
+        margin-top: 20px;
+    }
+}

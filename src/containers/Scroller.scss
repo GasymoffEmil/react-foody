@@ -1,0 +1,20 @@
+@import '../scss/variables';
+.screenshots{
+    background-color: $color-white;
+}
+
+.screenshots__inner{
+    position: relative;
+    padding: 80px 0 90px;
+}
+
+.screenshots-slider{
+    margin-top: 60px;
+}
+
+.screenshots-slider__item{
+    display: inline-flex!important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
