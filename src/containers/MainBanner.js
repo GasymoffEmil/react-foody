@@ -6,8 +6,8 @@ const MainBanner = (props) => {
             <div className="container">
                 <div className="main-banner__inner">
                     <div className="main-banner__text">
-                        <h1 class="title">Awesome App for Your <br/> Modern Lifestyle</h1>
-                        <div class="desc">
+                        <h1 className="title">Awesome App for Your <br/> Modern Lifestyle</h1>
+                        <div className="desc">
                             <p>We'll help you make your plans, inform you about the best events happening all around the world, tell you all about the best places to eat in the city and much much more. </p>
                         </div>
                         <div className="btn-group">

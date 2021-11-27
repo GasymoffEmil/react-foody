@@ -117,9 +117,7 @@
         margin-top: 50px;
     }
     li{
-        &:not(:last-child){     
-            margin-right: 12px;
-        }
+        margin: 0 6px;
         &.slick-active{   
             a, button{    
                 width: 14px;
@@ -138,5 +136,52 @@
             transition: 0.3s;
             background-color: $color-orange;
         }
+    }
+}
+
+@media screen and (max-width: $point-xl){
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: $point-lg){
+    .container {
+        max-width: 960px;
+    }
+    .section-title{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .btn-group {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        .btn {
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+        }
+    }
+    
+    .btn {
+        min-width: 125px;
+        padding: 12px 20px 13px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: $point-md){
+    .section-title{
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (max-width: $point-sm){
+    .section-title{
+        font-size: 28px;
+        line-height: 32px;
     }
 }

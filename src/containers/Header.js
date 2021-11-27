@@ -12,7 +12,7 @@ const Header = (props) => {
                         <a href="/" className="header__logo">
                             <img src={Logo} alt="Logo"/>
                         </a>
-                        <nav class="header__menu">
+                        <nav className={props.menuClasses}>
                             <a href="/">Home</a>
                             <a href="/">About Us</a>
                             <a href="/">How It Works</a>
@@ -24,6 +24,11 @@ const Header = (props) => {
                                 Login
                             </button>
                         </form>
+                        <button className={props.burgerClasses} onClick={props.changeBurger}>
+                            <span className="burger__line"></span>
+                            <span className="burger__line"></span>
+                            <span className="burger__line"></span>
+                        </button>
                     </div>
                 </div>
             </header>

@@ -1,7 +1,10 @@
 import Slider from "react-slick";
+import ScreenShotsListItem from "../components/ScreenshotsListItem";
 import "slick-carousel/slick/slick.css"; 
 import './Scroller.scss';
+import Database from "../data";
 
+const screenshots = [...Database.screenshots];
 
 const settings = {
     dots: true,
@@ -26,36 +29,11 @@ const Scroller = (props) => {
                 <div className="screenshots__inner">
                     <h2 className="section-title section-title--centered">Screenshots</h2>
                     <Slider className="screenshots-slider" {...settings}>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-01.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-02.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-01.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-02.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-01.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
-                        <div className="screenshots-slider__item">
-                            <picture>
-                                <img src={require('../img/screenshots-slider-item-02.png').default} alt="Screenshot 01" />
-                            </picture>
-                        </div>
+                        {
+                            screenshots.map((elem, index) => {
+                                return <ScreenShotsListItem key={index} imgSrc={elem.imgSrc} alt={elem.srcAlt}/>
+                            })
+                        }
                     </Slider>
                 </div>
             </div>

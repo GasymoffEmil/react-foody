@@ -8,15 +8,33 @@
     position: relative;
     left: -15px;
     margin-top: 40px;
+    .slick-track{
+        display: flex !important;
+        align-items: stretch;
+        .slick-slide{
+            height: auto;
+            &>div{
+                height: 100%;
+            }
+        }
+    }
+    .slick-list{
+        height: 100%;
+    }
 }
 
 .testimonials-slider__item-wrapper {
     padding: 0 15px;
     position: relative;
+    height: 100%;
 }
 .testimonials-slider__item {
     width: 100%;
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonials-slider__text {
@@ -25,6 +43,7 @@
     padding: 25px 25px 30px;
     position: relative;
     margin-bottom: 15px;
+    height: 100%;
     &::after {
         content: '';
         display: block;
@@ -51,6 +70,7 @@
     text-align: center;
     font-feature-settings: 'liga' off;
     color: #18191F;
+    min-height: 64px;
 }
 .testimonials-slider__item-desc {
     font-weight: 400;
@@ -70,6 +90,17 @@
     flex-direction: column;
     align-items: center;
     margin-top: 28px;
+}
+.testimonials-slider__author-avatar{
+    width: 56px;
+    height: 56px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    img{
+        max-width: 100%;
+        height: auto;
+    }
 }
 .testimonials-slider__author-name {
     font-family: "Montserrat", sans-serif;

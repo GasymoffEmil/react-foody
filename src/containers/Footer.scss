@@ -49,3 +49,9 @@
         margin-top: 20px;
     }
 }
+
+@media screen and (max-width: $point-sm){
+    .footer__menu{
+        flex-direction: column;
+    }
+}

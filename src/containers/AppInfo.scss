@@ -3,7 +3,7 @@
     background-color: $color-orange;
 }
 .app-info__inner {
-    padding: 80px 0;
+    padding: 7.2% 0;
     color: $color-white;
     display: flex;
     flex-wrap: wrap;
@@ -12,8 +12,7 @@
 }
 
 .app-info-text {
-    width: 100%;
-    max-width: 545px;
+    width: 49%;
     position: relative;
 }
 
@@ -71,6 +70,68 @@
     position: relative;
     display: inline-flex;
     justify-content: flex-end;
-    flex: 1;
-    padding: 0 20px 0 20px;
+    width: 51%;
+    padding: 0 66px 0;
+    picture{
+        width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: $point-xl){
+    .instructions:not(:first-child){
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: $point-lg){
+    .app-info__images{
+        display: none;
+    }
+    .app-info-text{
+        max-width: 543px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: $point-md){
+    .instructions:not(:first-child){
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: $point-sm){
+    .app-info{
+        .section-title{
+            text-align: center;
+            &:before{
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .app-info__inner{
+        padding: 13% 0 17%;
+    }
+    .instructions__item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .instructions__item-text{
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        &:not(:first-child){
+            margin-top: 35px;
+        }
+    }
 }
